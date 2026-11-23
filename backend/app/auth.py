@@ -16,11 +16,20 @@ router = APIRouter(
     tags=["Authentication"]
 )
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # JWT configuration
-SECRET_KEY = "2e3d52e2d404d7189c25cd2bc1583ac09109108afc7bae2c40e1b2d2429599a7"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY environment variable is missing")
+
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
 
 
 # Password hashing

@@ -1,0 +1,277 @@
+
+/* =================================
+   TASKFLOW CREATE / EDIT TASK FORM
+================================= */
+
+.taskform-page {
+    min-height: 100vh;
+    padding: 45px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f5f9;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.taskform-container {
+    width: 100%;
+    max-width: 850px;
+}
+
+/* HEADER */
+
+.taskform-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 35px;
+    border-radius: 14px 14px 0 0;
+    background: linear-gradient(120deg, #172554, #2563eb);
+    color: white;
+}
+
+.taskform-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #bfdbfe;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.taskform-header h1 {
+    margin: 0 0 10px;
+    font-size: 29px;
+    font-weight: 750;
+}
+
+.taskform-header p {
+    margin: 0;
+    color: #dbeafe;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.taskform-header-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.16);
+    color: white;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+/* FORM CARD */
+
+.taskform-card {
+    padding: 35px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 15px 40px rgba(15,23,42,0.06);
+}
+
+.taskform-section-title {
+    margin-bottom: 28px;
+}
+
+.taskform-section-title h2 {
+    margin: 0 0 7px;
+    color: #0f172a;
+    font-size: 19px;
+}
+
+.taskform-section-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* FORM GROUPS */
+
+.taskform-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.taskform-group label {
+    margin-bottom: 10px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.taskform-group label span {
+    color: #dc2626;
+}
+
+.taskform-group input,
+.taskform-group textarea,
+.taskform-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #334155;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.taskform-group input,
+.taskform-group select {
+    height: 47px;
+}
+
+.taskform-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.taskform-group input:focus,
+.taskform-group textarea:focus,
+.taskform-group select:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+}
+
+.taskform-group input::placeholder,
+.taskform-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.taskform-group small {
+    margin-top: 8px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+/* STATUS AND PRIORITY ROW */
+
+.taskform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+/* ERROR MESSAGE */
+
+.taskform-error {
+    padding: 13px 15px;
+    margin-bottom: 22px;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ACTION BUTTONS */
+
+.taskform-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 22px;
+    margin-top: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.taskform-actions button {
+    min-width: 125px;
+    height: 45px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.taskform-cancel {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.taskform-cancel:hover {
+    background: #e2e8f0;
+}
+
+.taskform-submit {
+    background: #2563eb;
+    color: white;
+}
+
+.taskform-submit:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.taskform-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* FOOTER */
+
+.taskform-footer {
+    padding: 20px;
+    color: #94a3b8;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+    .taskform-page {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .taskform-header {
+        padding: 25px 22px;
+    }
+
+    .taskform-header h1 {
+        font-size: 23px;
+    }
+
+    .taskform-header-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .taskform-card {
+        padding: 25px 20px;
+    }
+
+    .taskform-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .taskform-actions {
+        flex-direction: column-reverse;
+    }
+
+    .taskform-actions button {
+        width: 100%;
+    }
+}
